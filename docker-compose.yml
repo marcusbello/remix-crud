@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  postgres-remix:
+    image: "postgres:15"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+    #   Set a volume for data and initial sql script
+    #   Maybe configure init db
+    volumes:
+      - ".pgdata/remix-app:/var/lib/postgresql/data"
+
