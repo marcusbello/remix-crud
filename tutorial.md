@@ -106,7 +106,7 @@ Push schema to postgres
 
 To push our schema to the postgres server, we will need to
 start our local postgres server using docker by downloading or copying 
-[this](https://github.com/marcusbello/remix-crud/docker-compose.yml) 
+[this](https://raw.githubusercontent.com/marcusbello/remix-crud/master/docker-compose.yml) 
 docker-compose file to your project folder and running the below code.
 ```
 docker-compose up
@@ -298,11 +298,15 @@ application and test with insomnia.
 
 ### Test with Insomnia
 image
-image
-image
+
 image
 
-[link to test data for Insomnia]()
+image
+
+image
+
+
+[link to test data for Insomnia](https://raw.githubusercontent.com/marcusbello/remix-crud/master/Insomnia_remix_todo_test.json)
 
 ### Conclusion
 We are at the end, in this tutorial we were able to build a Todo Json API, using Remix,
