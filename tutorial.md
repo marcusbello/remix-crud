@@ -298,7 +298,7 @@ if (request.method === 'PUT') {
         return redirect('/todos');
     }
 ```
-With this we are going to get the request that has 
+With this we are going to get the request that has a
 json body consisting of id and done status, we then used Prisma
 update to update the data in our database.
 
