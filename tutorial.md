@@ -254,7 +254,8 @@ this return the todo which has the id parsed in the body as its id.
 
 - For Update, in this app, we are only updating the `done` field of our Todo model,
   no need to update other information, to do this we will add another 
-  block of code to our action function in the `app/routes/todos.tsx`.
+  block of code to our action function in the `app/routes/todos.tsx`
+  that uses the HTTP `PUT` method.
 ```
 if (request.method === 'PUT') {
         const id = body.id
@@ -297,7 +298,9 @@ application and test with insomnia.
 
 ### Test with Insomnia
 image
-
+image
+image
+image
 
 ### Conclusion
 We are at the end, in this tutorial we were able to build a Todo Json API, using Remix,
