@@ -37,7 +37,7 @@ export async function action({ request }: ActionArgs) {
 
         await db.todo.update({
             where: {id: parseInt(id as string, 10)},
-            data: {done: done === 'true'},
+            data: {done: done},
         });
 
         return redirect('/todos');
