@@ -1,6 +1,6 @@
 ## Tutorial: CRUD with RemixJs - Todo App - Prisma with postgres
 In this tutorial we will learn how to build a Todo API, 
-where we will talk about CRUD, use RemixJs, Docker, Prisma, Postgres, Insomnia.
+where we will talk about CRUD, using RemixJs, Docker, Prisma, Postgres, Insomnia.
 
 ### The Project - Todo API
 This will be a Todo App API where the user can add a new `Todo`, 
@@ -39,6 +39,34 @@ Remix App Server started at http://localhost:3000
 ```
 visit `http://localhost:3000` on your browser, you'll see the
 remix welcome page.
+
+#### Basic Remix File
+A basic remix file has a loader, action and the JSX element, let's see
+the `$postId.tsx` file
+```
+import type {
+  ActionArgs,
+  LoaderArgs,
+} from "@remix-run/node"; // or cloudflare/deno
+import { useParams } from "@remix-run/react";
+
+export const loader = async ({ params }: LoaderArgs) => {
+  console.log(params.postId);
+};
+
+export const action = async ({ params }: ActionArgs) => {
+  console.log(params.postId);
+};
+
+export default function PostRoute() {
+  const params = useParams();
+  console.log(params.postId);
+}
+```
+Basically, we have a loader, action and the JSX element
+- Loader: they autoload with the page.
+- Action: Does something when there's an action
+- JSX Element: handles the JSX directly
 
 
 ### CRUD - Create, Read, Update, Delete
@@ -313,3 +341,5 @@ We are at the end, in this tutorial we were able to build a Todo Json API, using
 Prisma and Postgres, we had two routes dedicated to our API, 
 we were able to Create, Read, Update and Delete a Todo, and 
 we can also see all our todos at once. 
+
+The full code can be found on my [GitHub.com](https://github.com/marcusbello/remix-crud)
